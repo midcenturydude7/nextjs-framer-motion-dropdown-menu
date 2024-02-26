@@ -22,7 +22,7 @@ export default function App() {
       className={styles.menu}
     >
       <motion.button
-        whileTap={{ scale: 0.97 }}
+        whileTap={{ scale: 0.98 }}
         onClick={() => setIsOpen(!isOpen)}
       >
         Menu
