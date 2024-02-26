@@ -19,7 +19,7 @@ export default function App() {
     <motion.nav
       initial={false}
       animate={isOpen ? "open" : "closed"}
-      className="menu"
+      className={styles.menu}
     >
       <motion.button
         whileTap={{ scale: 0.97 }}
@@ -36,6 +36,36 @@ export default function App() {
           </svg>
         </motion.div>
       </motion.button>
+
+      <motion.ul
+        variants={{
+          open: {
+            clipPath: "inset(0% 0% 0% 0% round 10px)",
+            transition: {
+              type: "spring",
+              bounce: 0,
+              duration: 0.7,
+              delayChildren: 0.3,
+              staggerChildren: 0.05,
+            },
+          },
+          closed: {
+            clipPath: "inset(10% 50% 90% 50% round 10px)",
+            transition: {
+              type: "spring",
+              bounce: 0,
+              duration: 0.3,
+            },
+          },
+        }}
+        style={{ pointerEvents: isOpen ? "auto" : "none" }}
+      >
+        <motion.li variants={itemVariants}>Item 1</motion.li>
+        <motion.li variants={itemVariants}>Item 2</motion.li>
+        <motion.li variants={itemVariants}>Item 3</motion.li>
+        <motion.li variants={itemVariants}>Item 4</motion.li>
+        <motion.li variants={itemVariants}>Item 5</motion.li>
+      </motion.ul>
     </motion.nav>
   );
 }
