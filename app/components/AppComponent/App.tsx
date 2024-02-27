@@ -18,7 +18,7 @@ export default function App() {
     <motion.nav
       initial={false}
       animate={isOpen ? "open" : "closed"}
-      className="filter:drop-shadow(1px_1px_1px_#4700b3) w-[500px]"
+      className="filter:drop-shadow(1px_1px_1px_#4700b3) w-[500px] font-[sofia-pro,_sans-serif] font-medium not-italic antialiased"
     >
       <motion.button
         whileTap={{ scale: 0.97 }}
