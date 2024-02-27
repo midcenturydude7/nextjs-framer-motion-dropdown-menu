@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { motion, Variants } from "framer-motion";
-import styles from "./AppComponent.module.css";
 
 const itemVariants: Variants = {
   open: {
@@ -19,7 +18,7 @@ export default function App() {
     <motion.nav
       initial={false}
       animate={isOpen ? "open" : "closed"}
-      className={styles.menu}
+      className="filter:drop-shadow(1px_1px_1px_#4700b3) w-[500px]"
     >
       <motion.button
         whileTap={{ scale: 0.97 }}
